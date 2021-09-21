@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  nlp:
+    build:
+      context: .
+      dockerfile: ./docker/nlp/Dockerfile
+      command: python finBERT_sentiment_a.py

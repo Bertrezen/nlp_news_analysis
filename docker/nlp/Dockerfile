@@ -16,4 +16,4 @@ RUN rm -f /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3
 RUN pip3 install -r requirements.txt
 RUN python -m pip install --upgrade pip
 
-RUN finBERT_sentiment_a.py
+ADD ./nlp /app/nlp
