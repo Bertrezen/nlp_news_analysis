@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/nlp/Dockerfile
-      container_name: python38_nlp
+    container_name: python38_nlp
     command: python finBERT_sentiment_a.py
     volumes: 
       - .:/nlp
