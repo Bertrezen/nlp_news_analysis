@@ -13,7 +13,8 @@ COPY requirements.txt .
 RUN rm -f /usr/bin/python && ln -s /usr/bin/python3.8 /usr/bin/python
 RUN rm -f /usr/bin/python3 && ln -s /usr/bin/python3.8 /usr/bin/python3
 
-RUN pip3 install -r requirements.txt
 RUN python -m pip install --upgrade pip
+RUN pip3 install -r requirements.txt
+RUN pip3 install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 
 ADD ./nlp /app/nlp
