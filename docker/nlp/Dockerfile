@@ -17,4 +17,6 @@ RUN python -m pip install --upgrade pip
 RUN pip3 install -r requirements.txt
 RUN pip3 install torch==1.9.0+cpu torchvision==0.10.0+cpu torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 
-ADD ./nlp /app/nlp
+COPY ./nlp/. /app/
+
+#CMD [ "python", "./nlp/finBERT_sentiment_a.py" ]
